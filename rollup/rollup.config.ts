@@ -404,9 +404,7 @@ export default (args: Record<string, string>): rollup.RollupOptions[] => {
       commonjs(),
       extensionDirectoryPlugin({
         include: `${DEFAULT_EXTENSIONS_PATH}/**/*`,
-        isDefaultExtension: true,
         rollupPlugins: [
-          commonjs(),
           terser()
         ]
       }),
